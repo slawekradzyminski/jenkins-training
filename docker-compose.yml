@@ -19,5 +19,5 @@ services:
     expose:
       - 22
     environment:
-      - JENKINS_AGENT_SSH_PUBKEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDEbp72sXqCs8o78OMw5ok6wTZVaFrdj/yUsLluj462tuZyklDnbmI+V2rkPfYtGESwqp4pUgu2CcfVqtaoG0kS68sxha2jQYHWaZDwVWZfRzer5lP6ecieelMECPKz8xeecBwo/F5XRctti0y0aAWtqIIWGyuHpn3V6OsleaB3zoCgbjIx3YuFd58fcrrSaWH6LFOBReEBr2B2d4qawkBbl+eOR4zhApfFp2wKKci8Arq/MlKO9o3eTkQJstegLqltGLj0A66u45KnOQEjCr/SuA7EIFnd3wlGjHB6GFtfQNHb2Nw96YZhGDsrvyzFE6t2zTOvuX39QPylmvUnmo6wS3Ezv8m+0v3875Ttp8EjpIMxzfbJizOQ1xUE8VcnrQrg/r4BsTvOF0VAyRfMmfQXJY80MqthOLV1avsSsofmdnX/yoJrSoyfjzdpgCHo7W+39c029duEMQrKPC+rIpD+KfbcHF9exFgPUFHZyHxT2k4fGz71J5w/6j+dDMWJLIM= s.radzyminski@C02Y33CEJG5H
+      - JENKINS_AGENT_SSH_PUBKEY={GENERATE_YOURSELF}
 
