@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   jenkins:
-    image: jenkins/jenkins:lts
+    image: jenkins/jenkins:lts-jdk11
     privileged: true
     user: root
     ports:
@@ -12,12 +12,12 @@ services:
       - /tmp/jenkins:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
   agent:
-    image: jenkins/ssh-agent:jdk11
+    image: jenkins/ssh-agent:latest-jdk11
     privileged: true
     user: root
     container_name: agent
     expose:
       - 22
     environment:
-      - JENKINS_AGENT_SSH_PUBKEY={GENERATE_YOURSELF}
+      - JENKINS_AGENT_SSH_PUBKEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDN1/L8j0aMlh5x2jtokxp9Swnu24uynN17E2NVVpwlnpL6VziwliH09qFu41ZfXD1ULqVphYEuPptd2JiZA3usTvcTsSzokI1yXCvSY5w9Z5dRStNZcNVR/MGPj3jcWQUBtGubfJXrOM4fvonug1bjzLFhAAp9DKTuxSZJVl6vtlkeOpKTKQrooN1ihCAXR6dDwglwDcEc1eO0TaTlJWIrF+bLCjADdmu6Skjq64BmddtHxMPkGhPygWsJfSxiOkL3Cw7aSly4RPf8aQ4csHYBtQOIPLZEWuD5Zx0AeiZGwnQIlpuxSWV6odIy3SzaVy9RxqqCA2MhwxPbMFTyI3uUrDbq6uI1NfgglO8CfWNGPdYseV2oteDf/MOGVRhGcy8qx5jdfeoACnIPVAqfedqOpBuNqLk5EDnXYcRjQ9Fwuab9LeHu6QBi+H2/00fYxxt42efMpU+WV3Cj2IMKb6xoMLZyjTkqELc35u4t3Ui82HYbs/vZCzdcBxbY6D/meMM= ocado@slawek.local
 
